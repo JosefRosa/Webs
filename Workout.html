@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Josef Rosa</h1>
+<div class="table">
+<a class="active" href="#home">Home</a>
+<a href="#news">News</a>
+<a href="">News</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="menu">
+    <button class="odkazy" onmouseover="OpenExercise(event, 'Shyby')">Shyby</button>
+    <button class="odkazy" onmouseover="OpenExercise(event, 'Dipy')">Dipy</button>
+    <button class="odkazy" onmouseover="OpenExercise(event, 'Kliky')">Kliky</button>
+</div>
+    <div id="Shyby" class="odinfo">
+        <h3>Shyby</h3>
+        <p>dasdasdasdas</p>
+    </div>
+ 
+    <div id="Dipy" class="odinfo">
+        <h3>Dipy</h3>
+        <p>asdasdsadasdas</p>
+    </div>
+
+    <div id="Kliky" class="odinfo">
+        <h3>Kliky</h3>
+        <p>asdasdasdasd</p>
+    </div>
+
+
+<script>
+function OpenExercise(evt, nameExcersise) {
+    
+    var i, odinfo, odkazy;
+  
+    odinfo = document.getElementsByClassName("odinfo");
+    for (i = 0; i < odinfo.length; i++) {
+      odinfo[i].style.display = "none";
+    }
+  
+    odkazy = document.getElementsByClassName("odkazy");
+    for (i = 0; i < odkazy.length; i++) {
+      odkazy[i].className = odkazy[i].className.replace(" active", "");
+    }
+  
+    document.getElementById(nameExcersise).style.display = "block";
+    evt.currentTarget.className += " active";
+  }</script>
+</body>
+</html>
